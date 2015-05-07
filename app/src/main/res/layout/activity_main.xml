@@ -1,0 +1,277 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".main"
+    android:background="@drawable/bg">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/calc"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the cost of the item as listed on the product"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/numb"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/numb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/calc"
+        android:orientation="horizontal"
+        android:id="@+id/grouped">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"
+            android:id="@+id/radioButton"
+            android:layout_below="@+id/numb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:id="@+id/radioButton2"
+            android:layout_above="@+id/radioButton5"
+            android:layout_alignLeft="@+id/radioButton5"
+            android:layout_alignStart="@+id/radioButton5" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:id="@+id/radioButton4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButton" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:id="@+id/radioButton5"
+            android:layout_alignTop="@+id/radioButton6"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:id="@+id/radioButton6"
+            android:layout_alignTop="@+id/radioButton4"
+            android:layout_alignLeft="@+id/radioButton3"
+            android:layout_alignStart="@+id/radioButton3" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30%"
+            android:id="@+id/radioButton3"
+            android:layout_toEndOf="@+id/numb"
+            android:layout_above="@+id/radioButton6"
+            android:layout_toRightOf="@+id/numb" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35%"
+            android:id="@+id/radioButton7"
+            android:layout_below="@+id/radioButton4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%"
+            android:id="@+id/radioButton8"
+            android:layout_below="@+id/radioButton5"
+            android:layout_alignLeft="@+id/radioButton5"
+            android:layout_alignStart="@+id/radioButton5" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45%"
+            android:id="@+id/radioButton9"
+            android:layout_toEndOf="@+id/radioButton5"
+            android:layout_alignTop="@+id/radioButton8"
+            android:layout_alignLeft="@+id/radioButton6"
+            android:layout_alignStart="@+id/radioButton6" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:id="@+id/radioButton10"
+            android:layout_below="@+id/radioButton7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55%"
+            android:id="@+id/radioButton11"
+            android:layout_toStartOf="@+id/radioButton9"
+            android:layout_alignTop="@+id/radioButton10"
+            android:layout_alignLeft="@+id/radioButton8"
+            android:layout_alignStart="@+id/radioButton8" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            android:id="@+id/radioButton12"
+            android:layout_toEndOf="@+id/radioButton11"
+            android:layout_alignTop="@+id/radioButton11"
+            android:layout_toRightOf="@+id/radioButton11" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="65%"
+            android:id="@+id/radioButton25"
+            android:layout_below="@+id/radioButton10"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70%"
+            android:id="@+id/radioButton26"
+            android:layout_toStartOf="@+id/radioButton9"
+            android:layout_alignTop="@+id/radioButton25"
+            android:layout_alignLeft="@+id/radioButton11"
+            android:layout_alignStart="@+id/radioButton11" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75%"
+            android:id="@+id/radioButton27"
+            android:layout_toEndOf="@+id/radioButton26"
+            android:layout_alignTop="@+id/radioButton26"
+            android:layout_toRightOf="@+id/radioButton26" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80%"
+            android:id="@+id/radioButton28"
+            android:layout_above="@+id/calc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="85%"
+            android:id="@+id/radioButton29"
+            android:layout_toStartOf="@+id/radioButton9"
+            android:layout_below="@+id/radioButton26"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90%"
+            android:id="@+id/radioButton30"
+            android:layout_toEndOf="@+id/radioButton11"
+            android:layout_above="@+id/calc"
+            android:layout_alignLeft="@+id/radioButton26"
+            android:layout_alignStart="@+id/radioButton26" />
+
+    </RadioGroup>
+</HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scroll and select the discount rate"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/numb"
+        android:layout_alignLeft="@+id/numb"
+        android:layout_alignStart="@+id/numb"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/bValue"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Discounted Amount(Before Taxes)"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/calc"
+        android:layout_alignRight="@+id/calc"
+        android:layout_alignEnd="@+id/calc"
+        android:layout_marginTop="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Discounted Amount(After Taxes)"
+        android:id="@+id/textView2"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/bValue"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/aValue"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
